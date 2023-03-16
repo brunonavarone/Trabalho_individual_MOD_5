@@ -13,16 +13,8 @@ app.on("line", (resposta) => {
         console.log(listinha_Propriedades_Css.sort().join())
         app.close;
     }
-
-    else if(listinha_CSS_Existente.includes(resposta)){
-        listinha_Propriedades_Css.push(`${resposta}\n`);
-        app.setPrompt("Insira uma propriedade CSS: ")
-        app.prompt();
-        
-    }
-
     else{
-        console.log("Você inseriu uma propriedad inválida!")
+        listinha_Propriedades_Css.push(`${resposta}\n`);
         app.setPrompt("Insira uma propriedade CSS: ")
         app.prompt();
     }
